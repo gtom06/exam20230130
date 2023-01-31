@@ -54,6 +54,8 @@ class Main {
                                 resultString = Constants.RESULT + result;
                                 logger.log(Level.INFO, resultString);
                                 break;
+                            default:
+                                logger.log(Level.SEVERE, "\nOperazione non valida");
                        }
                 }
             }

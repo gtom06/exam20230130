@@ -1,5 +1,5 @@
 package main;
-import Strings.Constants;
+import strings.Constants;
 
 import java.util.Scanner;
 import java.util.logging.Level;
@@ -13,19 +13,21 @@ class Main {
 
         Scanner signSc = new Scanner(System.in);
         double result;
+        String resultString;
         String sign = signSc.nextLine().toLowerCase();
         if (!sign.isBlank()) {
-            logger.log(Level.INFO, Constants.INSERT);
-            Scanner n1Sc = new Scanner(System.in);
-            Double n1 = Double.parseDouble(n1Sc.nextLine());
-
             if (sign.equals("/") || sign.equals("*") || sign.equals("sqrt") || sign.equals("log10") || sign.equals("+") || sign.equals("-")) {
+                logger.log(Level.INFO, Constants.INSERT);
+                Scanner n1Sc = new Scanner(System.in);
+                Double n1 = Double.parseDouble(n1Sc.nextLine());
                 switch (sign) {
                     case "sqrt":
-                        logger.log(Level.INFO, Constants.RESULT + Math.sqrt(n1));
+                        resultString = Constants.RESULT + Math.sqrt(n1);
+                        logger.log(Level.INFO, resultString);
                         break;
                     case "log10":
-                        logger.log(Level.INFO, Constants.RESULT + Math.log10(n1));
+                        resultString = Constants.RESULT + Math.log10(n1);
+                        logger.log(Level.INFO, resultString);
                         break;
                     default:
                         logger.log(Level.INFO, Constants.INSERT);
@@ -34,25 +36,29 @@ class Main {
                         switch (sign) {
                             case "+":
                                 result = n1+n2;
-                                logger.log(Level.INFO, Constants.RESULT + result);
+                                resultString = Constants.RESULT + result;
+                                logger.log(Level.INFO, resultString);
                                 break;
                             case "/":
                                 result = n1/n2;
-                                logger.log(Level.INFO, Constants.RESULT + result);
+                                resultString = Constants.RESULT + result;
+                                logger.log(Level.INFO, resultString);
                                 break;
                             case "*":
                                 result = n1*n2;
-                                logger.log(Level.INFO, Constants.RESULT + result);
+                                resultString = Constants.RESULT + result;
+                                logger.log(Level.INFO, resultString);
                                 break;
                             case "-":
                                 result = n1-n2;
-                                logger.log(Level.INFO, Constants.RESULT + result);
+                                resultString = Constants.RESULT + result;
+                                logger.log(Level.INFO, resultString);
                                 break;
-                            default:
-                                logger.log(Level.SEVERE, "\nError");
-                                System.exit(1);
                        }
                 }
+            }
+            else {
+                logger.log(Level.SEVERE, "\nOperazione non valida");
             }
         }
     }

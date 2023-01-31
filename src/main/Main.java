@@ -22,11 +22,11 @@ class Main {
                 Double n1 = Double.parseDouble(n1Sc.nextLine());
                 switch (sign) {
                     case "sqrt":
-                        resultString = Constants.RESULT + Math.sqrt(n1);
+                        resultString = Constants.RESULT + Math.sqrt(n1)+ Constants.CIAO;
                         logger.log(Level.INFO, resultString);
                         break;
                     case "log10":
-                        resultString = Constants.RESULT + Math.log10(n1);
+                        resultString = Constants.RESULT + Math.log10(n1) + Constants.CIAO;
                         logger.log(Level.INFO, resultString);
                         break;
                     default:
@@ -36,22 +36,22 @@ class Main {
                         switch (sign) {
                             case "+":
                                 result = n1+n2;
-                                resultString = Constants.RESULT + result;
+                                resultString = Constants.RESULT + result+ Constants.CIAO;
                                 logger.log(Level.INFO, resultString);
                                 break;
                             case "/":
                                 result = n1/n2;
-                                resultString = Constants.RESULT + result;
+                                resultString = Constants.RESULT + result+ Constants.CIAO;
                                 logger.log(Level.INFO, resultString);
                                 break;
                             case "*":
                                 result = n1*n2;
-                                resultString = Constants.RESULT + result;
+                                resultString = Constants.RESULT + result+ Constants.CIAO;
                                 logger.log(Level.INFO, resultString);
                                 break;
                             case "-":
                                 result = n1-n2;
-                                resultString = Constants.RESULT + result;
+                                resultString = Constants.RESULT + result + Constants.CIAO;
                                 logger.log(Level.INFO, resultString);
                                 break;
                             default:

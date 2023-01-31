@@ -11,4 +11,5 @@ public final class Constants {
 
     public static final String INSERT = "\nInserisci un numero";
     public static final String RESULT = "\nRisultato:\n";
+    public static final String CIAO = "\nCiao!!!";
 }
